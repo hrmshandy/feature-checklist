@@ -1,0 +1,44 @@
+{
+    "name": "hrmsh/feature-checklist",
+    "description": "Feature Checklist.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shandy Hermawan",
+            "email": "hrm.shandy05@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "symfony/dom-crawler": "^4.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "~0.9",
+        "phpunit/phpunit": "~4.0|~5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hrmsh\\FeatureChecklist\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Hrmsh\\FeatureChecklist\\FeatureChecklistServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
