@@ -1,6 +1,6 @@
 ## Instalation
 
-To get started with Socialite, use Composer to add the package to your project's dependencies:
+To get started, use Composer to add the package to your project's dependencies:
 
     composer require hrmsh/feature-checklist
 
