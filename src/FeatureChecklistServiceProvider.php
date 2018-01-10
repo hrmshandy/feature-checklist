@@ -12,6 +12,10 @@ class FeatureChecklistServiceProvider extends ServiceProvider
         $this->registerRoutes();
         $this->registerViews();
         $this->registerBladeDirectives();
+
+        $this->publishes([
+            __DIR__.'/../dist/feature-checklist' => public_path('vendor/feature-checklist'),
+        ], 'public');
     }
 
     public function register()
