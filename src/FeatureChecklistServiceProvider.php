@@ -9,7 +9,7 @@ class FeatureChecklistServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        //$this->registerMigrations();
+        $this->registerRoutes();
         $this->registerViews();
         $this->registerBladeDirectives();
     }
@@ -34,16 +34,23 @@ class FeatureChecklistServiceProvider extends ServiceProvider
     protected function registerBladeDirectives()
     {
         Blade::directive('featurechecklist', function(){
-            $features = Feature::all();
-            return view("feature-checklist::alerts", compact('features'));
+            return "<div id='features'></div>
+            <script>
+                (function(d, s, id){
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) {return;}
+                    js = d.createElement(s); js.id = id;
+                    js.src = '/vendor/feature-checklist/js/sdk.js';
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'feature-checklist-sdk'));
+            </script>";
         });   
     }
 
-    protected function registerViewComposer()
+    public function registerRoutes()
     {
-        view()->composer(
-            'feature-checklist::alerts',
-            'Hrmsh\FeatureChecklist\ViewComposers\FeaturesComposer'
-        );
+        if (!$this->app->routesAreCached()) {
+            require __DIR__ . '/../routes.php';
+        }
     }
 }

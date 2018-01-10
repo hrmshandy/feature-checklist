@@ -1,0 +1,27 @@
+{
+    "analytic": {
+        "label": "Google Analytic",
+        "class": "Hrmsh\\FeatureChecklist\\Features\\GoogleAnalytic",
+        "visibility": "visible"
+    },
+    "metaTitle": {
+        "label": "Meta Title",
+        "class": "Hrmsh\\FeatureChecklist\\Features\\MetaTitle",
+        "visibility": "visible"
+    },
+    "metaDescription": {
+        "label": "Meta Description",
+        "class": "Hrmsh\\FeatureChecklist\\Features\\MetaDescription",
+        "visibility": "visible"
+    },
+    "metaFacebook": {
+        "label": "Meta Facebook",
+        "class": "Hrmsh\\FeatureChecklist\\Features\\MetaDescription",
+        "visibility": "visible"
+    },
+    "metaTwitter": {
+        "label": "Meta Twitter",
+        "class": "Hrmsh\\FeatureChecklist\\Features\\MetaDescription",
+        "visibility": "visible"
+    }
+}
